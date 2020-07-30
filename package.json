@@ -1,7 +1,7 @@
 {
   "name": "smart-brain-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "app.js",
   "keywords": [],
   "author": "Sean Kelleher",
   "license": "ISC",
@@ -21,6 +21,6 @@
     "nodemon": "^2.0.4"
   },
   "scripts": {
-    "start": "nodemon server.js",
+    "start": "node app.js",
   }
 }
