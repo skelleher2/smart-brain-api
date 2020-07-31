@@ -8,6 +8,8 @@ const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
+const app = express();
+app.use(cors());
 
 const db = knex({
   client: 'pg',
@@ -17,7 +19,8 @@ const db = knex({
   }
 });
 
-const app = express();
+
+app.use(bodyParser.json());
 app.use(function (req, res, next) {
     // Website you wish to allow to connect
     res.setHeader('Access-Control-Allow-Origin', 'https://facerecognitionbrain-sk.herokuapp.com/');
@@ -37,7 +40,7 @@ app.use(function (req, res, next) {
 });
 
 
-app.use(bodyParser.json());
+
 
 app.get('/', (req, res)=> { res.send('its working') })
 app.post('/signin', signin.handleSignin(db, bcrypt))
