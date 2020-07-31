@@ -1,4 +1,3 @@
-app.use('Access-Control-Allow-Origin':'*');
 const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
@@ -9,14 +8,6 @@ const register = require('./controllers/register');
 const signin = require('./controllers/signin');
 const profile = require('./controllers/profile');
 const image = require('./controllers/image');
-
-const db = knex({
-  client: 'pg',
-  connection: {
-    connectionString : process.env.DATABASE_URL,
-    ssl: true,
-  }
-});
 
 const app = express();
 app.use(function (req, res, next) {
@@ -35,6 +26,14 @@ app.use(function (req, res, next) {
 
     // Pass to next layer of middleware
     next();
+});
+
+const db = knex({
+  client: 'pg',
+  connection: {
+    connectionString : process.env.DATABASE_URL,
+    ssl: true,
+  }
 });
 
 app.use(bodyParser.json());
