@@ -18,6 +18,8 @@ const db = knex({
   }
 });
 
+const app = express();
+
 const corsOptions = {
   origin: 'https://facial-recognition-machine.herokuapp.com',
   optionsSuccessStatus: 200
@@ -25,8 +27,6 @@ const corsOptions = {
 app.use(cors(corsOptions));
 app.options('*', cors());
 app.use('/', routes);
-
-const app = express();
 
 app.use(bodyParser.json());
 
