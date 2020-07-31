@@ -1,3 +1,4 @@
+app.use('Access-Control-Allow-Origin':'*');
 const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
@@ -20,7 +21,6 @@ const db = knex({
 const app = express();
 
 app.use(cors());
-app.use('Access-Control-Allow-Origin':'*');
 app.use(bodyParser.json());
 
 app.get('/', (req, res)=> { res.send(db.users) })
