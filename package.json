@@ -4,7 +4,6 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js",
-    "start:dev": "nodemon server.js"
   },
   "keywords": [],
   "author": "Sean Kelleher",
@@ -18,7 +17,7 @@
     "knex": "^0.21.2",
     "pg": "^8.3.0"
   },
- "devDependencies": {
+   "devDependencies": {
     "nodemon": "^2.0.4"
   },
 }
