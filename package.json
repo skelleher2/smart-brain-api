@@ -1,10 +1,11 @@
 {
   "name": "smart-brain-api",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "script.js",
   "scripts": {
     "start": "nodemon server.js"
   },
+  
   "keywords": [],
   "author": "Sean Kelleher",
   "license": "ISC",
@@ -14,12 +15,8 @@
     "clarifai": "^2.9.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "heroku": "^7.42.5",
     "knex": "^0.21.2",
     "pg": "^8.3.0"
-  },
-  "devDependencies": {
-    "nodemon": "^2.0.4"
   },
   "description": ""
 }
