@@ -4,8 +4,7 @@
   "main": "script.js",
   "scripts": {
     "start": "node index.js",
-    "build": "webpack",
-    "heroku-postbuild": "ng build --prod"
+    "build": "webpack"
   },
   
   "keywords": [],
@@ -20,7 +19,7 @@
     "knex": "^0.21.2",
     "pg": "^8.3.0"
   },
-  "description":""
+  "description": ""
 }
 
 
